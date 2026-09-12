@@ -107,10 +107,36 @@ export default function Sections() {
         </motion.h2>
 
         <motion.article className="step-browse" {...fadeUp(reduce, 0.05)}>
-          <img
-            src="/textures/rose-gate-open.jpg"
-            alt="Rose walls opening onto stacked bouquets and hatboxes"
-          />
+          <div
+            className="step-browse-visual"
+            role="img"
+            aria-label="Peonies, stacked cooler bunches, and blush ranunculus from the shop"
+          >
+            <img
+              src="/images/atelier-wall-left.jpg"
+              alt=""
+              width={1100}
+              height={1600}
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="/images/atelier-cooler.jpg"
+              alt=""
+              width={1100}
+              height={1600}
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="/images/atelier-wall-right.jpg"
+              alt=""
+              width={1100}
+              height={1600}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
           <div className="step-browse-copy">
             <h3>Browse</h3>
             <p>
@@ -140,7 +166,11 @@ export default function Sections() {
             <div className="card-core">
               <img
                 src="/images/bouquet-magenta-box.jpg"
-                alt="A round box of magenta roses"
+                alt="A packed bunch of magenta garden roses"
+                width={1600}
+                height={2000}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

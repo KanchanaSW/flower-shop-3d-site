@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && wrangler deploy"
   },
   "dependencies": {
     "@fontsource/outfit": "^5.2.8",
@@ -26,6 +27,7 @@
     "@tailwindcss/vite": "^4.1.13",
     "@vitejs/plugin-react": "^5.0.2",
     "tailwindcss": "^4.1.13",
-    "vite": "^7.1.5"
+    "vite": "^7.1.5",
+    "wrangler": "^4.131.0"
   }
 }

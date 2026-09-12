@@ -5,6 +5,7 @@ dist
 .env
 .env.*
 .netlify
+.wrangler
 .venv
 tmp
 *.local
