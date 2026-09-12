@@ -7,24 +7,32 @@ const COLLECTIONS = [
     note: "A wrapped armful of saturated garden roses.",
     image: "/images/bouquet-hot-pink.jpg",
     span: "featured",
+    width: 1466,
+    height: 2200,
   },
   {
     name: "Tissue blush",
     note: "Soft pink roses in crinkled tissue.",
     image: "/images/bouquet-blush-right.jpg",
     span: "tall",
+    width: 1468,
+    height: 2200,
   },
   {
     name: "Cloud hydrangea",
     note: "Cream heads, orchids, a pale cool.",
     image: "/images/bouquet-cream-hydrangea.jpg",
     span: "wide",
+    width: 2200,
+    height: 1302,
   },
   {
     name: "Nude hatbox",
     note: "Tight cream roses in a blush box.",
     image: "/images/bouquet-peach-hatbox.jpg",
     span: "tall",
+    width: 1650,
+    height: 2200,
   },
 ];
 
@@ -67,7 +75,21 @@ export default function Sections() {
             >
               <div className="card-shell">
                 <div className="card-core">
-                  <img src={item.image} alt={item.name} />
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    width={item.width}
+                    height={item.height}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    sizes={
+                      item.span === "featured"
+                        ? "(min-width: 768px) 42vw, 92vw"
+                        : item.span === "wide"
+                          ? "(min-width: 768px) 55vw, 92vw"
+                          : "(min-width: 768px) 28vw, 92vw"
+                    }
+                  />
                 </div>
               </div>
               <div className="card-meta">
